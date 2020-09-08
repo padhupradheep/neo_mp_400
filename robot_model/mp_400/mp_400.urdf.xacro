@@ -22,6 +22,8 @@
 
 <xacro:include filename="$(find neo_mp_400)/robot_model/mp_400/xacros/sick_S300.xacro" />
 
+<!-- Depth camera -->
+<xacro:include filename="$(find neo_mp_400)/robot_model/mp_400/xacros/depth_camera.xacro" /> 
 <!-- Microscan - Comment/Uncomment if required -->
  <!-- <xacro:include filename="$(find neo_mp_400)/robot_model/mp_400/xacros/micro_scan.xacro" /> -->
 
@@ -145,7 +147,7 @@
   </xacro:us_sensor-->
     
     <!--Camera  -->
-<!-- <xacro:camera name="camera" parent="base_link">
-    <origin xyz="0 0 0.38" rpy="0 0 0" />
-  </xacro:camera> -->
+  <xacro:depth_camera name="camera" parent="base_link">
+    <origin xyz="0.158 -0.015 0.393" rpy="0 0 0" />
+  </xacro:depth_camera>
 </robot>
